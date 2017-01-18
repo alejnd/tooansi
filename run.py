@@ -17,12 +17,12 @@ def upload():
         if 'file' not in request.files: return ('Error: No file given')
         
         file = request.files['file']
-        
-        # Check fileformat
-        if magic.from_file(file.filename, mime=True) !='image/png': return ('Error: file must be PNG image')
-
         absfile = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(absfile)
+
+        # Check fileformat
+        if magic.from_file(absfile, mime=True) !='image/png': return ('Error: file must be PNG image')
+
         ansistr = png2ansi.convert(absfile)
         os.remove(absfile)
         return (ansistr)
