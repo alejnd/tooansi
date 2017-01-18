@@ -19,6 +19,3 @@ def convert (filename):
         ansibuff += '\n'
 
     return ansibuff
-    
-if __name__ == '__main__':
-    print(convert('../../goplayground/ansirenderblender/sample.png'))
