@@ -8,7 +8,7 @@ import os
 
 app = Flask(__name__)
 app.config.from_object(config)
-app.secret_key = os.urandom(24)
+
 
 @app.route('/upload', methods=['POST'])
 def upload():

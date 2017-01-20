@@ -1,9 +1,11 @@
 
+import os
+
 class Config(object):
     DEBUG        = False
     TESTING      = False
     CSRF_ENABLED = True
-    SECRET_KEY   = '\x16\x91\xa4ZPL\xe6=%\xb6\x94\xe3<Cg\x1e\x00f21\x92\x8aq\x15'
+    SECRET_KEY   = os.urandom(24)
     UPLOAD_FOLDER ='/tmp'
     MAX_CONTENT_LENGTH = 50 * 1024 #5Kb limit
 
@@ -15,4 +17,4 @@ class DevelopmentConfig(Config):
     DEBUG    = True
     TESTING  = True
 
-config = DevelopmentConfig()
+config = ProductionConfig()
