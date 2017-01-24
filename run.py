@@ -1,6 +1,6 @@
 from config import config
+from PIL import Image
 from flask import Flask, request
-import magic
 import png2ansi
 import os
 
@@ -21,7 +21,8 @@ def upload():
         file.save(absfile)
 
         # Check fileformat
-        if magic.from_file(absfile, mime=True) !='image/png': return ('Error: file must be PNG image')
+        with  Image.open(absfile) as img: imgformat = img.format
+        if imgformat !='PNG': return ('Error: file must be PNG image')
 
         ansistr = png2ansi.convert(absfile)
         os.remove(absfile)
