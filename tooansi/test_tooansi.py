@@ -5,7 +5,7 @@ import unittest
 import run
 from io import FileIO
 from PIL import Image, ImageDraw
-import os
+import os 
 
 class ServerTests(unittest.TestCase):
 
