@@ -7,7 +7,8 @@ setup(
     author_email='alejnd@gmail.com',
     url='https://github.com/alejnd/tooansi',
     long_description=__doc__,
-    py_modules=['run','config','png2ansi'],
+    #py_modules=['run','config','png2ansi'],
+    packages =['tooansi'],
     install_requires=['flask','pillow'],
     zip_safe=False,
 )
