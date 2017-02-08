@@ -2,7 +2,7 @@
 #Use green command to run a nicer test output from test directory
 #from PIL import Image
 import unittest
-import run
+from tooansi import run
 from io import FileIO
 from PIL import Image, ImageDraw
 import os 

@@ -1,7 +1,7 @@
+from . import png2ansi
 from .config import config
 from PIL import Image
 from flask import Flask, request
-from . import png2ansi
 import os
 
 # example: curl -F "file=@sample.png"  localhost:5000/upload
