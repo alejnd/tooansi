@@ -11,5 +11,5 @@ setup(
     packages=find_packages(),
     install_requires=['flask','pillow'],
     zip_safe=False,
-    entry_points = {'console_scripts': [ 'tooansi = tooansi.run:app.run' ]},
+    entry_points = {'console_scripts': [ 'tooansi = tooansi.run:main' ]},
 )

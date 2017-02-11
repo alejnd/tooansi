@@ -28,6 +28,8 @@ def upload():
         os.remove(absfile)
         return (ansistr)
 
+def main():
+    app.run(host = config.HOST)
 
 if __name__ == '__main__':
-    app.run()
+    main()
