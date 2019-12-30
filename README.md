@@ -4,6 +4,8 @@ Tooansi is a rest endpoint to deliver png images and gives you plain text ansi e
 characters to make nice ascii art. Written in python using Flask
 Supports 256 colors and alpha channel but your terminal must be capable of this (like gnome-terminal)
 
+requires libjpeg-dev and zlib1g-dev installed
+
 Usage example:
 
 service start: python run.py 
