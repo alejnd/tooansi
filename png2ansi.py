@@ -16,6 +16,6 @@ def convert (filename):
             r, g, b, a = img.getpixel((x,y))
             if a ==  0: ansibuff += '{0!s} '.format(CRESET)
             else: ansibuff += '{!s};{!s};{!s};{!s}m '.format(SETBGCOLOR, r, g, b)
-        ansibuff += '\n'
+        ansibuff += CRESET+'\n'
 
     return ansibuff
